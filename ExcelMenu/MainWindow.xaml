@@ -1,0 +1,27 @@
+﻿<Window x:Class="ExcelMenu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExcelMenu"
+        mc:Ignorable="d"
+        Title="技术查询工具 (WW20210121)" Height="800" Width="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"></ColumnDefinition>
+            <ColumnDefinition Width="2"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="ListBox1" Grid.Column="0" Margin="0,0,0,0" SelectionChanged="ListBox1_SelectionChanged"/>
+        <GridSplitter x:Name="GridSplitter1" Grid.Column="1" Width="5" HorizontalAlignment="Stretch"></GridSplitter>
+        <DataGrid x:Name="DataGrid1" Grid.Column="2" Margin="0,0,0,0">
+            <DataGrid.ContextMenu>
+                <ContextMenu Name="Menu1" StaysOpen="true">
+                    <MenuItem Header="打开" Click="MenuItem_Click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+
+
+    </Grid>
+</Window>
